@@ -113,16 +113,17 @@ header {
 
 .active{
 	 color: #fec44a;
-	 background-color: #fefefe; /*background color active*/
+	 background-color: #fefefe;
+	 
 	 margin: 0;
 }
 
 .navbar-default .navbar-nav>.active>a{
 	 color: #e4ecef;
-	 background-color: #e4ecef;
+	 background-color: #fefe11;
 }
 .navbar-default .navbar-nav>.active:hover{
-	color: #e4ecef;
+	color: #fefefe;
 	background-color: #fec44a;
 }
 
@@ -141,13 +142,9 @@ header {
 	width: 100%;
 	font-size: 2.375em;
 }
-
-
-
 .navText:hover{
 	cursor:pointer;
 }
-
 .marketing{
 	margin-top: 4em;
 }
@@ -162,6 +159,7 @@ header {
     background-position: center;
     background-size: cover;
     transition: transform .5s ease-out;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .tile {
     position: relative;
@@ -170,6 +168,7 @@ header {
     height: 15em;
     overflow: hidden;
     cursor: pointer;
+	
   }
 .tile:hover .photo .txt{
 	width: 100%;
@@ -233,4 +232,174 @@ header {
   .carousel-caption {
 	  margin-bottom: 1.25em;
 	}
+}
+.row-main{
+	margin-bottom: 1em;
+}
+.col-main-index{
+	height: 12em;	
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 1em; 
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.col-design{
+	background-image: url(../images/img03.jpg);	
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.col-illustration{
+	background-image: url(../images/img04.jpg);	
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.col-concept{
+	background-image: url(../images/img06.jpg);	
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+ .txt-main {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 1.5em;
+	height: 2em;
+	padding-top: 0.25em;
+    color:#fefefe;
+	background-color: #fec44a;
+	font-family: Calibri, sans-serif;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+	width: 0%;
+	transition: width 1s;
+	width: 100%;
+	vertical-align: baseline;
+}
+.txt-main > span{
+	margin-left: 1em;
+}
+
+.col-main-index:hover .txt-main{
+	
+}
+.title-sub-page{
+	font-family: Calibri, sans-serif;
+	color: #fec44a;
+	width: 100%;
+	text-align: center;
+	font-size: 3.5em;
+	margin-bottom: 0.5em;
+}
+.navbar-dropdown-main:hover .dropdown-menu-title{
+	animation-name: dropMain;
+    animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+}
+.dropdown-menu-title{
+	height: 2.1em;
+	width: 3.2em;
+	text-align: left;
+	background-color: #fec44a;
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	clip: rect(0px, 3.2em, 0em, 0px);
+	animation-name: dropMainOff;
+    animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.dropdown-menu-title a:hover{
+	text-decoration: none;
+}
+.item-dropdown-menu{
+	font-size: 0.505em;
+	color: #fefefe;
+	padding-left: 0.25em;
+}
+.item-dropdown-menu:hover{
+	color: #fec44a;
+	background-color:white;
+}
+@keyframes dropMain {
+    from {clip: rect(0px, 3.2em, 0em, 0px);}
+    to {clip: rect(0px, 3.2em, 2.55em, 0px);}
+}
+@keyframes dropMainOff {
+    from {clip: rect(0px, 3.9em, 2.55em, 0px);}
+    to {clip: rect(0px, 3.9em, 0em, 0px);}
+}
+.corner-ribbon{
+  width: 200px;
+  background: #fec44a;
+  position: relative;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #fefefe;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  	font-family: Calibri, sans-serif;
+}
+
+
+
+
+.main-title-container{
+	position: relative;
+	display:inline-block;
+	left: 1.5em;
+	font-size: 1.5em !important;
+}
+.g-title-main{
+	position:absolute;
+	left: -0.5em;
+	top: -0.5em;
+	vertical-align: middle;
+	font-family: Calibri, sans-serif;
+	font-size: 5em;
+	text-shadow: 0px 0px #fec44a;
+	color: #7b8ec9;
+}
+.main-title-text{
+	
+}
+.main-title-text-name{
+	color: #3b4460;
+	font-size: 1.5em !important;
+	text-shadow: 0px 0px #fec44a;
+	font-family: Calibri, sans-serif;
+	margin:0 !important;
+	text-align: left;
+}
+.main-title-text-subtitle{
+	text-shadow: 0px 0px #fec44a;
+	font-family: Calibri, sans-serif;
+	color: #3b4460;
+	font-size: 1.5em !important;
+	margin:0 !important;
+	position: relative;
+	top: -0.35em;
+}
+.main-title-text-subtitle span{
+	font-size: 1.2em;
+	color: #7b8ec9;
 }
